@@ -33,7 +33,7 @@ else()
 endif()
 
 # vcpkg.json is the primary source for version data
-file(READ ${CMAKE_SOURCE_DIR}/vcpkg.json VCPKG_JSON_STRING)
+file(READ ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg.json VCPKG_JSON_STRING)
 string(JSON HI_LIB_NAME     GET ${VCPKG_JSON_STRING} "name")
 string(JSON HI_LIB_VERSION  GET ${VCPKG_JSON_STRING} "version")
 string(JSON HI_LIB_LICENSE  GET ${VCPKG_JSON_STRING} "license")
