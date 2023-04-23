@@ -541,6 +541,9 @@ void gfx_device_vulkan::initialize_device()
     device_features = down_cast<gfx_system_vulkan&>(system).requiredFeatures;
     device_features.setDualSrcBlend(available_device_features.dualSrcBlend);
     device_features.setShaderSampledImageArrayDynamicIndexing(VK_TRUE);
+
+    device_features.setSamplerAnisotropy(available_device_features.samplerAnisotropy);
+
     auto physical_device_features = vk::PhysicalDeviceFeatures2{device_features};
 
     auto device_descriptor_indexing_features = vk::PhysicalDeviceDescriptorIndexingFeatures{};

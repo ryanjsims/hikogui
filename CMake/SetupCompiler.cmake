@@ -14,13 +14,13 @@ if(WIN32)
     message(STATUS "[INFO] BUILD_SHARED_LIBS -> '${BUILD_SHARED_LIBS}'.")
 
     # When we build statically (MT):
-    if(NOT BUILD_SHARED_LIBS)
-        # Select MSVC runtime based on CMAKE_MSVC_RUNTIME_LIBRARY.
-        # We switch from the multi-threaded dynamically-linked library (default)
-        # to the multi-threaded statically-linked runtime library.
-        cmake_policy(SET CMP0091 NEW)
-        set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-    endif()
+    # if(NOT BUILD_SHARED_LIBS)
+    #     # Select MSVC runtime based on CMAKE_MSVC_RUNTIME_LIBRARY.
+    #     # We switch from the multi-threaded dynamically-linked library (default)
+    #     # to the multi-threaded statically-linked runtime library.
+    #     cmake_policy(SET CMP0091 NEW)
+    #     set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+    # endif()
 
 
     # Global Compiler flags for optimized Release and RelWithDebugInfo builds
