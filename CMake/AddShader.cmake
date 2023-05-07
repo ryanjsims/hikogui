@@ -48,7 +48,7 @@ function(add_shader_target RET)
         endif()
     endforeach()
 
-    add_custom_target("${RET}_itermediate" DEPENDS ${OUTPUT_PATHS})
-    add_dependencies(${RET} "${RET}_itermediate")
+    add_custom_target("${RET}_intermediate" DEPENDS ${OUTPUT_PATHS})
+    add_dependencies(${RET} "${RET}_intermediate")
 endfunction()
 
